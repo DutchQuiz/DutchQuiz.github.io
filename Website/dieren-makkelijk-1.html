@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Simple JavaScript Quiz</title>
+		<link rel="stylesheet" href="css/style.css">
+		
+		<script src="js/dieren-makkelijk-1.js"></script>
+	</head>
+	<body>
+		<nav role="navigation">
+  <div id="menuToggle">
+    
+    <input type="checkbox" />
+    
+  
+    <span></span>
+    <span></span>
+    <span></span>
+   
+    <ul id="menu"><hr>
+      <a href="index.html"><li>Home</li></a><hr>
+      <a href="makkelijk.html"><li>Makkelijk</li></a><hr>
+	  <a href="normaal.html"><li>normaal</li></a><hr>
+	  <a href="moeilijk.html"><li>Moeilijk</li></a><hr>
+      
+    </ul>
+  </div>
+</nav>
+		<div id="container">
+			<header>
+				<h1>Dieren-Makkelijk</h1>
+				<p>Weet jij alles over <strong>Dieren</strong>?</p>
+			</header>
+			<section>
+				<div id="results"></div>
+				<form name="quizForm" onsubmit="return submitAnswers()">
+					<h3>1. Hoe wordt een babyschaap genoemd?</h3>
+					<input type="radio" name="q1" value="a" id="q1a">a. Veulentje<br>
+					<input type="radio" name="q1" value="b" id="q1b">b. Bok<br>
+					<input type="radio" name="q1" value="c" id="q1c">c. Lammetje<br>
+					<input type="radio" name="q1" value="d" id="q1d">d. Kalfje<br>
+					
+					<h3>2. Welke kleur heeft een goudvis meestal?  </h3>
+					<input type="radio" name="q2" value="a" id="q2a">a. Oranje<br>
+					<input type="radio" name="q2" value="b" id="q2b">b. Goud<br>
+					<input type="radio" name="q2" value="c" id="q2c">c. Geel<br>
+					<input type="radio" name="q2" value="d" id="q2d">d. Rood<br>
+
+					<h3>3. Hoe wordt een jonge kat genoemd? </h3>
+					<input type="radio" name="q3" value="a" id="q3a">a. Kat<br>
+					<input type="radio" name="q3" value="b" id="q3b">b. Kitten<br>
+					<input type="radio" name="q3" value="c" id="q3c">c. Kater<br>
+					<input type="radio" name="q3" value="d" id="q3d">d. Poes<br>
+
+					<h3>4. Welke siervogel heeft een grote staart bestaande uit ca. 50 veren?</h3>
+					<input type="radio" name="q4" value="a" id="q4a">a. Papegaai<br>
+					<input type="radio" name="q4" value="b" id="q4b">b. Kaketoe<br>
+					<input type="radio" name="q4" value="c" id="q4c">c. Parkiet<br>
+					<input type="radio" name="q4" value="d" id="q4d">d. Pauw<br>
+
+					<h3>5. Op wat voor paard rijdt Sinterklaas?</h3>
+					<input type="radio" name="q5" value="a" id="q5a">a. Haflinger<br>
+					<input type="radio" name="q5" value="b" id="q5b">b. Fries paard<br>
+					<input type="radio" name="q5" value="c" id="q5c">c. Schimmel<br>
+					<input type="radio" name="q5" value="d" id="q5d">d. Arabier<br>
+					
+					<h3>6. Door welke vogel zouden de baby’s worden gebracht?</h3>
+					<input type="radio" name="q6" value="a" id="q6a">a. Ooievaar<br>
+					<input type="radio" name="q6" value="b" id="q6b">b. Gans<br>
+					<input type="radio" name="q6" value="c" id="q6c">c. Zwaan<br>
+					<input type="radio" name="q6" value="d" id="q6d">d. Kraai<br>
+					
+					<h3>7. Welke zoogdieren danken hun naam een hun gebrul bij zonsopgang?</h3>
+					<input type="radio" name="q7" value="a" id="q7a">a. De brulvogels<br>
+					<input type="radio" name="q7" value="b" id="q7b">b. De brulkoalas<br>
+					<input type="radio" name="q7" value="c" id="q7c">c. De brulapen<br>
+					<input type="radio" name="q7" value="d" id="q7d">d. De baardapen<br>
+					
+					<h3>8. Welk dier staat symbool voor het Wereld Natuur Fonds</h3>
+					<input type="radio" name="q8" value="a" id="q8a">a. De papegaai<br>
+					<input type="radio" name="q8" value="b" id="q8b">b. De aap<br>
+					<input type="radio" name="q8" value="c" id="q8c">c. De neushoorn<br>
+					<input type="radio" name="q8" value="d" id="q8d">d. De panda<br>
+					
+					<h3>9. In welk werelddeel komt de koala in het wild voor?</h3>
+					<input type="radio" name="q9" value="a" id="q9a">a. Australi&euml <br>
+					<input type="radio" name="q9" value="b" id="q9b">b. Europa<br>
+					<input type="radio" name="q9" value="c" id="q9c">c. Afrika<br>
+					<input type="radio" name="q9" value="d" id="q9d">d. Zuid-Amerika<br>
+					
+					<h3>10. Hoe wordt iemand die bijen houdt genoemd?</h3>
+					<input type="radio" name="q10" value="a" id="q10a">a. Bijenhouder<br>
+					<input type="radio" name="q10" value="b" id="q10b">b. Imker<br>
+					<input type="radio" name="q10" value="c" id="q10c">c. Bijentemmer<br>
+					<input type="radio" name="q10" value="d" id="q10d">d. Imgar<br>
+					<br><br>
+					<input type="submit" value="Controleer"><br>
+					</form>
+					<a href="dieren-makkelijk-1.html"><font color="red"><p><strong>Klik hier om het opnieuw te proberen.</strong></p></a>
+					
+			</section>
+			<footer>
+				<p><font color="white">Copyright by D22NProductions &copy2018 </p>
+			</footer>
+		</div>
+	</body>	
+</html>
